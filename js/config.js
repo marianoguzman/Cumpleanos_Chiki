@@ -68,11 +68,11 @@ const CONFIG = {
   // ---------------------------------------------------------------------
   GALERIA: [
     { imagen: "images/momento-2.jpeg", descripcion: "Sin miedo a las alturas" },
-    { imagen: "images/momento-3", descripcion: "El mejor birthday de todos" },
-    { imagen: "images/momento-4", descripcion: "En el tunco oink" },
-    { imagen: "images/momento-6", descripcion: "Por mas valentines juntos" },
-    { imagen: "images/momento-8", descripcion: "Fancy girl timeee" },
-    { imagen: "images/momento-11", descripcion: "Alocate bb" }
+    { imagen: "images/momento-3.jpeg", descripcion: "El mejor birthday de todos" },
+    { imagen: "images/momento-4.jpeg", descripcion: "En el tunco oink" },
+    { imagen: "images/momento-6.jpeg", descripcion: "Por mas valentines juntos" },
+    { imagen: "images/momento-8.jpeg", descripcion: "Fancy girl timeee" },
+    { imagen: "images/momento-11.jpeg", descripcion: "Alocate bb" }
   ],
 
   // ---------------------------------------------------------------------
@@ -93,7 +93,7 @@ const CONFIG = {
   //    Puede ser una imagen, un mensaje, o ambos.
   // ---------------------------------------------------------------------
   SORPRESA: {
-    imagen: "images/momento-12",     // [REEMPLAZA] o deja "" si no usarás imagen
+    imagen: "images/momento-12.jpeg",     // [REEMPLAZA] o deja "" si no usarás imagen
     mensaje: "Esta no te la esperabas uh JAJAJAJA de mis favsss" // [REEMPLAZA]
   },
 
