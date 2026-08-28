@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Feliz cumpleaños</title>
+<meta name="description" content="Una pequeña experiencia digital para un cumpleaños especial.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Hilo de progreso -->
+<div class="progress-track" aria-hidden="true">
+  <div class="progress-fill" id="progressFill"></div>
+  <div class="progress-heart" id="progressHeart">♥</div>
+</div>
+
+<!-- Partículas ambientales -->
+<div class="ambient" id="ambient" aria-hidden="true"></div>
+
+<!-- ============================= PORTADA ============================= -->
+<section id="portada" class="portada">
+  <div class="portada-contenido">
+    <p class="eyebrow">✨ un pequeño rincón para ti ✨</p>
+    <h1 class="portada-titulo">Hoy celebramos tus <span class="edad-num">22</span></h1>
+    <p class="portada-frase" id="fraseInicial"></p>
+    <button class="btn-entrar" id="btnEntrar">Entrar a tu sorpresa <span class="flecha">→</span></button>
+  </div>
+</section>
+
+<main id="contenido" class="contenido-principal">
+
+  <!-- ========================= SECCIÓN 1 ========================= -->
+  <section id="saludo" class="seccion seccion-saludo reveal">
+    <p class="cursiva" id="tituloSaludo"></p>
+    <p class="linea-edad">22 años de una persona increíble.</p>
+    <p class="frase-ella" id="fraseElla"></p>
+  </section>
+
+  <!-- ========================= SECCIÓN 2 ========================= -->
+  <section id="historia" class="seccion reveal">
+    <p class="eyebrow centrado">nuestra historia</p>
+    <h2 class="titulo-seccion centrado">Cada momento contó</h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- ========================= SECCIÓN 3 ========================= -->
+  <section id="galeria" class="seccion reveal">
+    <p class="eyebrow centrado">recuerdos</p>
+    <h2 class="titulo-seccion centrado">Un vistazo a lo vivido</h2>
+    <div class="galeria-grid" id="galeriaGrid"></div>
+  </section>
+
+  <!-- Lightbox de galería -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-cerrar" id="lightboxCerrar" aria-label="Cerrar">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <p class="lightbox-desc" id="lightboxDesc"></p>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">›</button>
+  </div>
+
+  <!-- ========================= SECCIÓN 4 ========================= -->
+  <section id="razones" class="seccion reveal">
+    <p class="eyebrow centrado">22 razones</p>
+    <h2 class="titulo-seccion centrado">22 razones por las que te quiero ❤️</h2>
+    <p class="subtexto centrado">Toca cada tarjeta para descubrir un pequeño secreto.</p>
+    <div class="razones-grid" id="razonesGrid"></div>
+  </section>
+
+  <!-- ========================= SECCIÓN 5 ========================= -->
+  <section id="sorpresa" class="seccion seccion-centro reveal">
+    <p class="eyebrow">un momento más</p>
+    <h2 class="titulo-seccion">Hay una última sorpresa...</h2>
+    <div class="caja-wrap" id="cajaWrap">
+      <button class="caja" id="cajaBtn" aria-label="Abrir sorpresa">
+        <svg viewBox="0 0 120 100" class="caja-svg">
+          <rect class="caja-cuerpo" x="15" y="40" width="90" height="55" rx="4"/>
+          <rect class="caja-cinta-v" x="53" y="40" width="14" height="55"/>
+          <g class="caja-tapa">
+            <rect x="10" y="26" width="100" height="20" rx="4"/>
+            <rect class="caja-cinta-v" x="53" y="26" width="14" height="20"/>
+            <path d="M60 26 C 45 5, 20 10, 30 26 Z"/>
+            <path d="M60 26 C 75 5, 100 10, 90 26 Z"/>
+          </g>
+        </svg>
+      </button>
+      <p class="caja-hint" id="cajaHint">Toca para abrir</p>
+    </div>
+    <div class="sorpresa-reveal" id="sorpresaReveal" hidden>
+      <img id="sorpresaImg" class="sorpresa-img" src="" alt="Tu sorpresa" hidden>
+      <p class="sorpresa-mensaje" id="sorpresaMensaje"></p>
+    </div>
+  </section>
+
+  <!-- ========================= SECCIÓN 6 ========================= -->
+  <section id="carta" class="seccion seccion-carta reveal">
+    <p class="eyebrow centrado">para ti</p>
+    <h2 class="titulo-seccion centrado">Para ti ❤️</h2>
+    <div class="carta-wrap" id="cartaWrap">
+      <button class="carta-sello" id="cartaSello" aria-label="Abrir carta">
+        <span>Abrir carta</span>
+      </button>
+      <div class="carta-papel" id="cartaPapel">
+        <p class="carta-texto" id="cartaTexto"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= SECCIÓN 7 ========================= -->
+  <section id="cancion" class="seccion seccion-centro reveal">
+    <p class="eyebrow">una pausa</p>
+    <h2 class="titulo-seccion">Una canción para ti 🎵</h2>
+    <div class="player">
+      <button class="player-btn" id="playBtn" aria-label="Reproducir">
+        <svg id="iconPlay" viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+        <svg id="iconPause" viewBox="0 0 24 24" width="22" height="22" hidden><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg>
+      </button>
+      <div class="player-info">
+        <p class="player-cancion" id="playerCancion"></p>
+        <p class="player-artista" id="playerArtista"></p>
+        <div class="player-bar"><div class="player-bar-fill" id="playerBarFill"></div></div>
+      </div>
+    </div>
+    <audio id="audio" preload="none"></audio>
+  </section>
+
+  <!-- ========================= SECCIÓN 8 ========================= -->
+  <section id="deseo" class="seccion seccion-centro reveal">
+    <p class="eyebrow">antes de seguir</p>
+    <h2 class="titulo-seccion">Pide un deseo...</h2>
+    <button class="vela-wrap" id="velaBtn" aria-label="Pide un deseo">
+      <svg viewBox="0 0 60 120" class="vela-svg">
+        <ellipse class="llama-glow" cx="30" cy="18" rx="18" ry="18"/>
+        <path class="llama" d="M30 6c6 8 8 13 8 18a8 8 0 0 1-16 0c0-5 2-10 8-18z"/>
+        <rect x="24" y="34" width="12" height="70" rx="2" class="vela-cuerpo"/>
+        <rect x="24" y="34" width="12" height="8" class="vela-mecha"/>
+      </svg>
+    </button>
+    <p class="deseo-reveal" id="deseoReveal" hidden></p>
+  </section>
+
+  <!-- ========================= SECCIÓN 9 ========================= -->
+  <section id="secreto" class="seccion seccion-centro reveal">
+    <p class="eyebrow">hay algo más</p>
+    <h2 class="titulo-seccion">Hay algo más...</h2>
+    <form class="secreto-form" id="secretoForm">
+      <input type="text" id="secretoInput" class="secreto-input" placeholder="Escribe la palabra..." autocomplete="off">
+      <button type="submit" class="secreto-btn">Revelar</button>
+    </form>
+    <p class="secreto-feedback" id="secretoFeedback"></p>
+    <p class="secreto-mensaje" id="secretoMensaje" hidden></p>
+  </section>
+
+  <!-- ========================= SECCIÓN FINAL ========================= -->
+  <section id="cierre" class="seccion seccion-cierre reveal">
+    <h2 class="cierre-titulo" id="cierreTitulo"></h2>
+    <p class="cierre-texto">Por tus 22, por todos los momentos que hemos vivido y por todos los que todavía nos faltan.</p>
+    <p class="cierre-frase" id="cierreFrase"></p>
+    <img class="cierre-foto" id="cierreFoto" src="" alt="Nosotros dos">
+    <div class="cierre-firma">
+      <p>Hecho especialmente para ti.</p>
+      <p id="cierreFirma"></p>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
