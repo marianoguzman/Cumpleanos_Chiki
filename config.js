@@ -27,7 +27,7 @@ const CONFIG = {
   // ---------------------------------------------------------------------
   // 3. SECCIÓN 1 — FELIZ CUMPLEAÑOS (frase corta sobre ella)
   // ---------------------------------------------------------------------
-  FRASE_SOBRE_ELLA: "Con todo el amor del mundo para mi baby la mas especial mas sweet y con el heartcito mas bonito.", // [Con todo el amor del mundo para mi baby la mas especial mas sweet y con el heartcito mas bonito]
+  FRASE_SOBRE_ELLA: "Con todo el amor del mundo para mi baby la mas especial, mas sweet y con el heartcito mas bonito del universooo.", // [Con todo el amor del mundo para mi baby la mas especial mas sweet y con el heartcito mas bonito]
 
   // ---------------------------------------------------------------------
   // 4. SECCIÓN 2 — NUESTRA HISTORIA (línea de tiempo)
@@ -94,18 +94,14 @@ const CONFIG = {
   // ---------------------------------------------------------------------
   SORPRESA: {
     imagen: "images/momento-12.jpeg",     // [REEMPLAZA] o deja "" si no usarás imagen
-    mensaje: "Esta no te la esperabas uh JAJAJAJA de mis favsss" // [REEMPLAZA]
+    mensaje: "Esta no te la esperabas uh jajajaja de mis favsss" // [REEMPLAZA]
   },
 
   // ---------------------------------------------------------------------
   // 8. SECCIÓN 6 — MENSAJE ESPECIAL (la carta)
   //    Este es el espacio más importante. Escribe tú el mensaje completo.
   // ---------------------------------------------------------------------
-  CARTA: `[Ya otra vuelta al sooool mi solecito, espero te estes divirtiendo o almenos sacandote una sonrisa el yo del futuro lo averiguara, desde el fondo de mi corazon te deseo lo mejor, espero haber hecho este dia especial y sigue brillando mi SUPER ESTRELLAAAA]
-
-Este espacio es solo tuyo: escribe lo que realmente quieres decirle.
-Puedes usar varios párrafos, se leerán con el mismo formato con el
-que los escribas aquí.`,
+  CARTA: `Ya otra vuelta al sooool mi solecito, espero te estes divirtiendo o almenos sacandote una sonrisa el yo del futuro lo averiguara, desde el fondo de mi corazon te deseo lo mejor, espero haber hecho este dia especial y sigue brillando mi SUPER ESTRELLAAAA`,
 
   // ---------------------------------------------------------------------
   // 9. SECCIÓN 7 — CANCIÓN ESPECIAL
@@ -126,7 +122,7 @@ que los escribas aquí.`,
   // 11. SECCIÓN 9 — MENSAJE SECRETO
   // ---------------------------------------------------------------------
   PALABRA_SECRETA: "chiki",              // [REEMPLAZA] no distingue mayúsculas/acentos
-  MENSAJE_SECRETO: "Ya estas old JAJAJA, pero omg emvejeces como el buen vino", // [REEMPLAZA]
+  MENSAJE_SECRETO: "Ya estas old JAJAJA, pero omg emvejeces como el buen vino ;)", // [REEMPLAZA]
 
   // ---------------------------------------------------------------------
   // 12. SECCIÓN FINAL
